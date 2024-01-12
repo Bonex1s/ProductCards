@@ -1,22 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const inputPanel = document.getElementById("input-panel");
-  const createButtonMain = document.getElementById("create-button-main");
-  const closeButton = document.getElementById("back-button");
+  const productList = document.getElementById("productList");
+  const submitButton = document.getElementById("submitButton");
 
-  createButtonMain.addEventListener("click", function () {
-    inputPanel.style.display = "block";
-  });
+  function updateProductList(product) {
+    const productCard = document.createElement("li");
+    productCard.innerHTML = `
+      <div>
+        <h1>${product.name}</h1>
+        <p>${product.model}</p>
+        <p>${product.price}</p>
+        <p>${product.color}</p>
+        <p>${product.text}</p>
+      </div>
+    `;
 
-  closeButton.addEventListener("click", function () {
-    inputPanel.style.display = "none";
-  });
-
-  //   =========================================   FORM
+    productList.appendChild(productCard);
+  }
 
   function submitForm() {
     const formData = {
-      // Соберите данные из полей формы
-      // Пример: name: document.getElementById('productName').value,
       name: document.getElementById("productName").value,
       model: document.getElementById("model").value,
       price: document.getElementById("price").value,
@@ -24,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
       text: document.getElementById("text-block").value,
     };
 
-    // Отправьте данные на сервер
     fetch("/api/addProduct", {
       method: "POST",
       headers: {
@@ -35,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-
-        // Обновите интерфейс, добавив новую карточку товара
         updateProductList(data.product);
       })
       .catch((error) => {
@@ -44,25 +43,20 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  function updateProductList(product) {
-    const productList = document.getElementById("productList");
-
-    console.log("productList", product.productList);
-
-    // Создайте элемент карточки товара
-    const productCard = document.createElement("li");
-    productCard.innerHTML = `
-    <div>
-      <img src="${product.image}" alt="${product.name}" />
-      <h1>${product.name}</h1>
-      <!-- Добавьте другие детали товара по необходимости -->
-    </div>
-  `;
-
-    // Добавьте карточку товара в список товаров
-    productList.appendChild(productCard);
+  if (submitButton) {
+    submitButton.addEventListener("click", submitForm);
   }
-  const submitButton = document.getElementById("submitButton");
-  submitButton.addEventListener("click", submitForm);
+
+  if (productList) {
+    fetch("/api/getProducts")
+      .then((response) => response.json())
+      .then((data) => {
+        data.forEach((product) => {
+          updateProductList(product);
+        });
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении товаров:", error);
+      });
+  }
 });
-// Найдите кнопку и добавьте обработчик события
