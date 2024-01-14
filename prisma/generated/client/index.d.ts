@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Product
+ * Model MyTable
  * 
  */
-export type Product = $Result.DefaultSelection<Prisma.$ProductPayload>
+export type MyTable = $Result.DefaultSelection<Prisma.$MyTablePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type Product = $Result.DefaultSelection<Prisma.$ProductPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Products
- * const products = await prisma.product.findMany()
+ * // Fetch zero or more MyTables
+ * const myTables = await prisma.myTable.findMany()
  * ```
  *
  * 
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Products
-   * const products = await prisma.product.findMany()
+   * // Fetch zero or more MyTables
+   * const myTables = await prisma.myTable.findMany()
    * ```
    *
    * 
@@ -142,14 +142,14 @@ export class PrismaClient<
   $extends: $Extensions.ExtendsHook<'extends', Prisma.TypeMapCb, ExtArgs>
 
       /**
-   * `prisma.product`: Exposes CRUD operations for the **Product** model.
+   * `prisma.myTable`: Exposes CRUD operations for the **MyTable** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Products
-    * const products = await prisma.product.findMany()
+    * // Fetch zero or more MyTables
+    * const myTables = await prisma.myTable.findMany()
     * ```
     */
-  get product(): Prisma.ProductDelegate<ExtArgs>;
+  get myTable(): Prisma.MyTableDelegate<ExtArgs>;
 }
 
 export namespace Prisma {
@@ -620,7 +620,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Product: 'Product'
+    MyTable: 'MyTable'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -637,73 +637,73 @@ export namespace Prisma {
 
   export type TypeMap<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     meta: {
-      modelProps: 'product'
+      modelProps: 'myTable'
       txIsolationLevel: Prisma.TransactionIsolationLevel
     },
     model: {
-      Product: {
-        payload: Prisma.$ProductPayload<ExtArgs>
-        fields: Prisma.ProductFieldRefs
+      MyTable: {
+        payload: Prisma.$MyTablePayload<ExtArgs>
+        fields: Prisma.MyTableFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ProductFindUniqueArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload> | null
+            args: Prisma.MyTableFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ProductFindUniqueOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>
+            args: Prisma.MyTableFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>
           }
           findFirst: {
-            args: Prisma.ProductFindFirstArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload> | null
+            args: Prisma.MyTableFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ProductFindFirstOrThrowArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>
+            args: Prisma.MyTableFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>
           }
           findMany: {
-            args: Prisma.ProductFindManyArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>[]
+            args: Prisma.MyTableFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>[]
           }
           create: {
-            args: Prisma.ProductCreateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>
+            args: Prisma.MyTableCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>
           }
           createMany: {
-            args: Prisma.ProductCreateManyArgs<ExtArgs>,
+            args: Prisma.MyTableCreateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           delete: {
-            args: Prisma.ProductDeleteArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>
+            args: Prisma.MyTableDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>
           }
           update: {
-            args: Prisma.ProductUpdateArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>
+            args: Prisma.MyTableUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>
           }
           deleteMany: {
-            args: Prisma.ProductDeleteManyArgs<ExtArgs>,
+            args: Prisma.MyTableDeleteManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           updateMany: {
-            args: Prisma.ProductUpdateManyArgs<ExtArgs>,
+            args: Prisma.MyTableUpdateManyArgs<ExtArgs>,
             result: Prisma.BatchPayload
           }
           upsert: {
-            args: Prisma.ProductUpsertArgs<ExtArgs>,
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>
+            args: Prisma.MyTableUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<Prisma.$MyTablePayload>
           }
           aggregate: {
-            args: Prisma.ProductAggregateArgs<ExtArgs>,
-            result: $Utils.Optional<AggregateProduct>
+            args: Prisma.MyTableAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateMyTable>
           }
           groupBy: {
-            args: Prisma.ProductGroupByArgs<ExtArgs>,
-            result: $Utils.Optional<ProductGroupByOutputType>[]
+            args: Prisma.MyTableGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<MyTableGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ProductCountArgs<ExtArgs>,
-            result: $Utils.Optional<ProductCountAggregateOutputType> | number
+            args: Prisma.MyTableCountArgs<ExtArgs>,
+            result: $Utils.Optional<MyTableCountAggregateOutputType> | number
           }
         }
       }
@@ -857,229 +857,238 @@ export namespace Prisma {
    */
 
   /**
-   * Model Product
+   * Model MyTable
    */
 
-  export type AggregateProduct = {
-    _count: ProductCountAggregateOutputType | null
-    _avg: ProductAvgAggregateOutputType | null
-    _sum: ProductSumAggregateOutputType | null
-    _min: ProductMinAggregateOutputType | null
-    _max: ProductMaxAggregateOutputType | null
+  export type AggregateMyTable = {
+    _count: MyTableCountAggregateOutputType | null
+    _avg: MyTableAvgAggregateOutputType | null
+    _sum: MyTableSumAggregateOutputType | null
+    _min: MyTableMinAggregateOutputType | null
+    _max: MyTableMaxAggregateOutputType | null
   }
 
-  export type ProductAvgAggregateOutputType = {
+  export type MyTableAvgAggregateOutputType = {
     id: number | null
     price: number | null
   }
 
-  export type ProductSumAggregateOutputType = {
+  export type MyTableSumAggregateOutputType = {
     id: number | null
     price: number | null
   }
 
-  export type ProductMinAggregateOutputType = {
-    id: number | null
-    name: string | null
-    model: string | null
-    price: number | null
-    color: string | null
-    text: string | null
-  }
-
-  export type ProductMaxAggregateOutputType = {
+  export type MyTableMinAggregateOutputType = {
     id: number | null
     name: string | null
     model: string | null
     price: number | null
     color: string | null
     text: string | null
+    image: Buffer | null
   }
 
-  export type ProductCountAggregateOutputType = {
+  export type MyTableMaxAggregateOutputType = {
+    id: number | null
+    name: string | null
+    model: string | null
+    price: number | null
+    color: string | null
+    text: string | null
+    image: Buffer | null
+  }
+
+  export type MyTableCountAggregateOutputType = {
     id: number
     name: number
     model: number
     price: number
     color: number
     text: number
+    image: number
     _all: number
   }
 
 
-  export type ProductAvgAggregateInputType = {
+  export type MyTableAvgAggregateInputType = {
     id?: true
     price?: true
   }
 
-  export type ProductSumAggregateInputType = {
+  export type MyTableSumAggregateInputType = {
     id?: true
     price?: true
   }
 
-  export type ProductMinAggregateInputType = {
+  export type MyTableMinAggregateInputType = {
     id?: true
     name?: true
     model?: true
     price?: true
     color?: true
     text?: true
+    image?: true
   }
 
-  export type ProductMaxAggregateInputType = {
+  export type MyTableMaxAggregateInputType = {
     id?: true
     name?: true
     model?: true
     price?: true
     color?: true
     text?: true
+    image?: true
   }
 
-  export type ProductCountAggregateInputType = {
+  export type MyTableCountAggregateInputType = {
     id?: true
     name?: true
     model?: true
     price?: true
     color?: true
     text?: true
+    image?: true
     _all?: true
   }
 
-  export type ProductAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Product to aggregate.
+     * Filter which MyTable to aggregate.
      */
-    where?: ProductWhereInput
+    where?: MyTableWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Products to fetch.
+     * Determine the order of MyTables to fetch.
      */
-    orderBy?: ProductOrderByWithRelationInput | ProductOrderByWithRelationInput[]
+    orderBy?: MyTableOrderByWithRelationInput | MyTableOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ProductWhereUniqueInput
+    cursor?: MyTableWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Products from the position of the cursor.
+     * Take `±n` MyTables from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Products.
+     * Skip the first `n` MyTables.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Products
+     * Count returned MyTables
     **/
-    _count?: true | ProductCountAggregateInputType
+    _count?: true | MyTableCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: ProductAvgAggregateInputType
+    _avg?: MyTableAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: ProductSumAggregateInputType
+    _sum?: MyTableSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ProductMinAggregateInputType
+    _min?: MyTableMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ProductMaxAggregateInputType
+    _max?: MyTableMaxAggregateInputType
   }
 
-  export type GetProductAggregateType<T extends ProductAggregateArgs> = {
-        [P in keyof T & keyof AggregateProduct]: P extends '_count' | 'count'
+  export type GetMyTableAggregateType<T extends MyTableAggregateArgs> = {
+        [P in keyof T & keyof AggregateMyTable]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateProduct[P]>
-      : GetScalarType<T[P], AggregateProduct[P]>
+        : GetScalarType<T[P], AggregateMyTable[P]>
+      : GetScalarType<T[P], AggregateMyTable[P]>
   }
 
 
 
 
-  export type ProductGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ProductWhereInput
-    orderBy?: ProductOrderByWithAggregationInput | ProductOrderByWithAggregationInput[]
-    by: ProductScalarFieldEnum[] | ProductScalarFieldEnum
-    having?: ProductScalarWhereWithAggregatesInput
+  export type MyTableGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: MyTableWhereInput
+    orderBy?: MyTableOrderByWithAggregationInput | MyTableOrderByWithAggregationInput[]
+    by: MyTableScalarFieldEnum[] | MyTableScalarFieldEnum
+    having?: MyTableScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ProductCountAggregateInputType | true
-    _avg?: ProductAvgAggregateInputType
-    _sum?: ProductSumAggregateInputType
-    _min?: ProductMinAggregateInputType
-    _max?: ProductMaxAggregateInputType
+    _count?: MyTableCountAggregateInputType | true
+    _avg?: MyTableAvgAggregateInputType
+    _sum?: MyTableSumAggregateInputType
+    _min?: MyTableMinAggregateInputType
+    _max?: MyTableMaxAggregateInputType
   }
 
-  export type ProductGroupByOutputType = {
+  export type MyTableGroupByOutputType = {
     id: number
     name: string
     model: string
     price: number
     color: string
     text: string
-    _count: ProductCountAggregateOutputType | null
-    _avg: ProductAvgAggregateOutputType | null
-    _sum: ProductSumAggregateOutputType | null
-    _min: ProductMinAggregateOutputType | null
-    _max: ProductMaxAggregateOutputType | null
+    image: Buffer | null
+    _count: MyTableCountAggregateOutputType | null
+    _avg: MyTableAvgAggregateOutputType | null
+    _sum: MyTableSumAggregateOutputType | null
+    _min: MyTableMinAggregateOutputType | null
+    _max: MyTableMaxAggregateOutputType | null
   }
 
-  type GetProductGroupByPayload<T extends ProductGroupByArgs> = Prisma.PrismaPromise<
+  type GetMyTableGroupByPayload<T extends MyTableGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ProductGroupByOutputType, T['by']> &
+      PickEnumerable<MyTableGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ProductGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof MyTableGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ProductGroupByOutputType[P]>
-            : GetScalarType<T[P], ProductGroupByOutputType[P]>
+              : GetScalarType<T[P], MyTableGroupByOutputType[P]>
+            : GetScalarType<T[P], MyTableGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ProductSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type MyTableSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     model?: boolean
     price?: boolean
     color?: boolean
     text?: boolean
-  }, ExtArgs["result"]["product"]>
+    image?: boolean
+  }, ExtArgs["result"]["myTable"]>
 
-  export type ProductSelectScalar = {
+  export type MyTableSelectScalar = {
     id?: boolean
     name?: boolean
     model?: boolean
     price?: boolean
     color?: boolean
     text?: boolean
+    image?: boolean
   }
 
 
-  export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Product"
+  export type $MyTablePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "MyTable"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1088,160 +1097,161 @@ export namespace Prisma {
       price: number
       color: string
       text: string
-    }, ExtArgs["result"]["product"]>
+      image: Buffer | null
+    }, ExtArgs["result"]["myTable"]>
     composites: {}
   }
 
 
-  type ProductGetPayload<S extends boolean | null | undefined | ProductDefaultArgs> = $Result.GetResult<Prisma.$ProductPayload, S>
+  type MyTableGetPayload<S extends boolean | null | undefined | MyTableDefaultArgs> = $Result.GetResult<Prisma.$MyTablePayload, S>
 
-  type ProductCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
-    Omit<ProductFindManyArgs, 'select' | 'include' | 'distinct'> & {
-      select?: ProductCountAggregateInputType | true
+  type MyTableCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = 
+    Omit<MyTableFindManyArgs, 'select' | 'include' | 'distinct'> & {
+      select?: MyTableCountAggregateInputType | true
     }
 
-  export interface ProductDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Product'], meta: { name: 'Product' } }
+  export interface MyTableDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MyTable'], meta: { name: 'MyTable' } }
     /**
-     * Find zero or one Product that matches the filter.
-     * @param {ProductFindUniqueArgs} args - Arguments to find a Product
+     * Find zero or one MyTable that matches the filter.
+     * @param {MyTableFindUniqueArgs} args - Arguments to find a MyTable
      * @example
-     * // Get one Product
-     * const product = await prisma.product.findUnique({
+     * // Get one MyTable
+     * const myTable = await prisma.myTable.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUnique<T extends ProductFindUniqueArgs<ExtArgs>>(
-      args: SelectSubset<T, ProductFindUniqueArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
+    findUnique<T extends MyTableFindUniqueArgs<ExtArgs>>(
+      args: SelectSubset<T, MyTableFindUniqueArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'findUnique'> | null, null, ExtArgs>
 
     /**
-     * Find one Product that matches the filter or throw an error  with `error.code='P2025'` 
+     * Find one MyTable that matches the filter or throw an error  with `error.code='P2025'` 
      *     if no matches were found.
-     * @param {ProductFindUniqueOrThrowArgs} args - Arguments to find a Product
+     * @param {MyTableFindUniqueOrThrowArgs} args - Arguments to find a MyTable
      * @example
-     * // Get one Product
-     * const product = await prisma.product.findUniqueOrThrow({
+     * // Get one MyTable
+     * const myTable = await prisma.myTable.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findUniqueOrThrow<T extends ProductFindUniqueOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, ProductFindUniqueOrThrowArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
+    findUniqueOrThrow<T extends MyTableFindUniqueOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, MyTableFindUniqueOrThrowArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'findUniqueOrThrow'>, never, ExtArgs>
 
     /**
-     * Find the first Product that matches the filter.
+     * Find the first MyTable that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductFindFirstArgs} args - Arguments to find a Product
+     * @param {MyTableFindFirstArgs} args - Arguments to find a MyTable
      * @example
-     * // Get one Product
-     * const product = await prisma.product.findFirst({
+     * // Get one MyTable
+     * const myTable = await prisma.myTable.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirst<T extends ProductFindFirstArgs<ExtArgs>>(
-      args?: SelectSubset<T, ProductFindFirstArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
+    findFirst<T extends MyTableFindFirstArgs<ExtArgs>>(
+      args?: SelectSubset<T, MyTableFindFirstArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'findFirst'> | null, null, ExtArgs>
 
     /**
-     * Find the first Product that matches the filter or
+     * Find the first MyTable that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductFindFirstOrThrowArgs} args - Arguments to find a Product
+     * @param {MyTableFindFirstOrThrowArgs} args - Arguments to find a MyTable
      * @example
-     * // Get one Product
-     * const product = await prisma.product.findFirstOrThrow({
+     * // Get one MyTable
+     * const myTable = await prisma.myTable.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
     **/
-    findFirstOrThrow<T extends ProductFindFirstOrThrowArgs<ExtArgs>>(
-      args?: SelectSubset<T, ProductFindFirstOrThrowArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
+    findFirstOrThrow<T extends MyTableFindFirstOrThrowArgs<ExtArgs>>(
+      args?: SelectSubset<T, MyTableFindFirstOrThrowArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'findFirstOrThrow'>, never, ExtArgs>
 
     /**
-     * Find zero or more Products that matches the filter.
+     * Find zero or more MyTables that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductFindManyArgs=} args - Arguments to filter and select certain fields only.
+     * @param {MyTableFindManyArgs=} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Products
-     * const products = await prisma.product.findMany()
+     * // Get all MyTables
+     * const myTables = await prisma.myTable.findMany()
      * 
-     * // Get first 10 Products
-     * const products = await prisma.product.findMany({ take: 10 })
+     * // Get first 10 MyTables
+     * const myTables = await prisma.myTable.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const productWithIdOnly = await prisma.product.findMany({ select: { id: true } })
+     * const myTableWithIdOnly = await prisma.myTable.findMany({ select: { id: true } })
      * 
     **/
-    findMany<T extends ProductFindManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, ProductFindManyArgs<ExtArgs>>
-    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'findMany'>>
+    findMany<T extends MyTableFindManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, MyTableFindManyArgs<ExtArgs>>
+    ): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'findMany'>>
 
     /**
-     * Create a Product.
-     * @param {ProductCreateArgs} args - Arguments to create a Product.
+     * Create a MyTable.
+     * @param {MyTableCreateArgs} args - Arguments to create a MyTable.
      * @example
-     * // Create one Product
-     * const Product = await prisma.product.create({
+     * // Create one MyTable
+     * const MyTable = await prisma.myTable.create({
      *   data: {
-     *     // ... data to create a Product
+     *     // ... data to create a MyTable
      *   }
      * })
      * 
     **/
-    create<T extends ProductCreateArgs<ExtArgs>>(
-      args: SelectSubset<T, ProductCreateArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'create'>, never, ExtArgs>
+    create<T extends MyTableCreateArgs<ExtArgs>>(
+      args: SelectSubset<T, MyTableCreateArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'create'>, never, ExtArgs>
 
     /**
-     * Create many Products.
-     *     @param {ProductCreateManyArgs} args - Arguments to create many Products.
+     * Create many MyTables.
+     *     @param {MyTableCreateManyArgs} args - Arguments to create many MyTables.
      *     @example
-     *     // Create many Products
-     *     const product = await prisma.product.createMany({
+     *     // Create many MyTables
+     *     const myTable = await prisma.myTable.createMany({
      *       data: {
      *         // ... provide data here
      *       }
      *     })
      *     
     **/
-    createMany<T extends ProductCreateManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, ProductCreateManyArgs<ExtArgs>>
+    createMany<T extends MyTableCreateManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, MyTableCreateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a Product.
-     * @param {ProductDeleteArgs} args - Arguments to delete one Product.
+     * Delete a MyTable.
+     * @param {MyTableDeleteArgs} args - Arguments to delete one MyTable.
      * @example
-     * // Delete one Product
-     * const Product = await prisma.product.delete({
+     * // Delete one MyTable
+     * const MyTable = await prisma.myTable.delete({
      *   where: {
-     *     // ... filter to delete one Product
+     *     // ... filter to delete one MyTable
      *   }
      * })
      * 
     **/
-    delete<T extends ProductDeleteArgs<ExtArgs>>(
-      args: SelectSubset<T, ProductDeleteArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
+    delete<T extends MyTableDeleteArgs<ExtArgs>>(
+      args: SelectSubset<T, MyTableDeleteArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'delete'>, never, ExtArgs>
 
     /**
-     * Update one Product.
-     * @param {ProductUpdateArgs} args - Arguments to update one Product.
+     * Update one MyTable.
+     * @param {MyTableUpdateArgs} args - Arguments to update one MyTable.
      * @example
-     * // Update one Product
-     * const product = await prisma.product.update({
+     * // Update one MyTable
+     * const myTable = await prisma.myTable.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1251,34 +1261,34 @@ export namespace Prisma {
      * })
      * 
     **/
-    update<T extends ProductUpdateArgs<ExtArgs>>(
-      args: SelectSubset<T, ProductUpdateArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'update'>, never, ExtArgs>
+    update<T extends MyTableUpdateArgs<ExtArgs>>(
+      args: SelectSubset<T, MyTableUpdateArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'update'>, never, ExtArgs>
 
     /**
-     * Delete zero or more Products.
-     * @param {ProductDeleteManyArgs} args - Arguments to filter Products to delete.
+     * Delete zero or more MyTables.
+     * @param {MyTableDeleteManyArgs} args - Arguments to filter MyTables to delete.
      * @example
-     * // Delete a few Products
-     * const { count } = await prisma.product.deleteMany({
+     * // Delete a few MyTables
+     * const { count } = await prisma.myTable.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
     **/
-    deleteMany<T extends ProductDeleteManyArgs<ExtArgs>>(
-      args?: SelectSubset<T, ProductDeleteManyArgs<ExtArgs>>
+    deleteMany<T extends MyTableDeleteManyArgs<ExtArgs>>(
+      args?: SelectSubset<T, MyTableDeleteManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Products.
+     * Update zero or more MyTables.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {MyTableUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Products
-     * const product = await prisma.product.updateMany({
+     * // Update many MyTables
+     * const myTable = await prisma.myTable.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1288,59 +1298,59 @@ export namespace Prisma {
      * })
      * 
     **/
-    updateMany<T extends ProductUpdateManyArgs<ExtArgs>>(
-      args: SelectSubset<T, ProductUpdateManyArgs<ExtArgs>>
+    updateMany<T extends MyTableUpdateManyArgs<ExtArgs>>(
+      args: SelectSubset<T, MyTableUpdateManyArgs<ExtArgs>>
     ): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Product.
-     * @param {ProductUpsertArgs} args - Arguments to update or create a Product.
+     * Create or update one MyTable.
+     * @param {MyTableUpsertArgs} args - Arguments to update or create a MyTable.
      * @example
-     * // Update or create a Product
-     * const product = await prisma.product.upsert({
+     * // Update or create a MyTable
+     * const myTable = await prisma.myTable.upsert({
      *   create: {
-     *     // ... data to create a Product
+     *     // ... data to create a MyTable
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Product we want to update
+     *     // ... the filter for the MyTable we want to update
      *   }
      * })
     **/
-    upsert<T extends ProductUpsertArgs<ExtArgs>>(
-      args: SelectSubset<T, ProductUpsertArgs<ExtArgs>>
-    ): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
+    upsert<T extends MyTableUpsertArgs<ExtArgs>>(
+      args: SelectSubset<T, MyTableUpsertArgs<ExtArgs>>
+    ): Prisma__MyTableClient<$Result.GetResult<Prisma.$MyTablePayload<ExtArgs>, T, 'upsert'>, never, ExtArgs>
 
     /**
-     * Count the number of Products.
+     * Count the number of MyTables.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductCountArgs} args - Arguments to filter Products to count.
+     * @param {MyTableCountArgs} args - Arguments to filter MyTables to count.
      * @example
-     * // Count the number of Products
-     * const count = await prisma.product.count({
+     * // Count the number of MyTables
+     * const count = await prisma.myTable.count({
      *   where: {
-     *     // ... the filter for the Products we want to count
+     *     // ... the filter for the MyTables we want to count
      *   }
      * })
     **/
-    count<T extends ProductCountArgs>(
-      args?: Subset<T, ProductCountArgs>,
+    count<T extends MyTableCountArgs>(
+      args?: Subset<T, MyTableCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ProductCountAggregateOutputType>
+          : GetScalarType<T['select'], MyTableCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Product.
+     * Allows you to perform aggregations operations on a MyTable.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {MyTableAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1360,13 +1370,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ProductAggregateArgs>(args: Subset<T, ProductAggregateArgs>): Prisma.PrismaPromise<GetProductAggregateType<T>>
+    aggregate<T extends MyTableAggregateArgs>(args: Subset<T, MyTableAggregateArgs>): Prisma.PrismaPromise<GetMyTableAggregateType<T>>
 
     /**
-     * Group by Product.
+     * Group by MyTable.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ProductGroupByArgs} args - Group by arguments.
+     * @param {MyTableGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1381,14 +1391,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ProductGroupByArgs,
+      T extends MyTableGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ProductGroupByArgs['orderBy'] }
-        : { orderBy?: ProductGroupByArgs['orderBy'] },
+        ? { orderBy: MyTableGroupByArgs['orderBy'] }
+        : { orderBy?: MyTableGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1437,20 +1447,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ProductGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetProductGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, MyTableGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMyTableGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Product model
+   * Fields of the MyTable model
    */
-  readonly fields: ProductFieldRefs;
+  readonly fields: MyTableFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Product.
+   * The delegate class that acts as a "Promise-like" for MyTable.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ProductClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__MyTableClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: 'PrismaPromise';
 
 
@@ -1479,298 +1489,299 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Product model
+   * Fields of the MyTable model
    */ 
-  interface ProductFieldRefs {
-    readonly id: FieldRef<"Product", 'Int'>
-    readonly name: FieldRef<"Product", 'String'>
-    readonly model: FieldRef<"Product", 'String'>
-    readonly price: FieldRef<"Product", 'Int'>
-    readonly color: FieldRef<"Product", 'String'>
-    readonly text: FieldRef<"Product", 'String'>
+  interface MyTableFieldRefs {
+    readonly id: FieldRef<"MyTable", 'Int'>
+    readonly name: FieldRef<"MyTable", 'String'>
+    readonly model: FieldRef<"MyTable", 'String'>
+    readonly price: FieldRef<"MyTable", 'Int'>
+    readonly color: FieldRef<"MyTable", 'String'>
+    readonly text: FieldRef<"MyTable", 'String'>
+    readonly image: FieldRef<"MyTable", 'Bytes'>
   }
     
 
   // Custom InputTypes
 
   /**
-   * Product findUnique
+   * MyTable findUnique
    */
-  export type ProductFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * Filter, which Product to fetch.
+     * Filter, which MyTable to fetch.
      */
-    where: ProductWhereUniqueInput
+    where: MyTableWhereUniqueInput
   }
 
 
   /**
-   * Product findUniqueOrThrow
+   * MyTable findUniqueOrThrow
    */
-  export type ProductFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * Filter, which Product to fetch.
+     * Filter, which MyTable to fetch.
      */
-    where: ProductWhereUniqueInput
+    where: MyTableWhereUniqueInput
   }
 
 
   /**
-   * Product findFirst
+   * MyTable findFirst
    */
-  export type ProductFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * Filter, which Product to fetch.
+     * Filter, which MyTable to fetch.
      */
-    where?: ProductWhereInput
+    where?: MyTableWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Products to fetch.
+     * Determine the order of MyTables to fetch.
      */
-    orderBy?: ProductOrderByWithRelationInput | ProductOrderByWithRelationInput[]
+    orderBy?: MyTableOrderByWithRelationInput | MyTableOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Products.
+     * Sets the position for searching for MyTables.
      */
-    cursor?: ProductWhereUniqueInput
+    cursor?: MyTableWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Products from the position of the cursor.
+     * Take `±n` MyTables from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Products.
+     * Skip the first `n` MyTables.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Products.
+     * Filter by unique combinations of MyTables.
      */
-    distinct?: ProductScalarFieldEnum | ProductScalarFieldEnum[]
+    distinct?: MyTableScalarFieldEnum | MyTableScalarFieldEnum[]
   }
 
 
   /**
-   * Product findFirstOrThrow
+   * MyTable findFirstOrThrow
    */
-  export type ProductFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * Filter, which Product to fetch.
+     * Filter, which MyTable to fetch.
      */
-    where?: ProductWhereInput
+    where?: MyTableWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Products to fetch.
+     * Determine the order of MyTables to fetch.
      */
-    orderBy?: ProductOrderByWithRelationInput | ProductOrderByWithRelationInput[]
+    orderBy?: MyTableOrderByWithRelationInput | MyTableOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Products.
+     * Sets the position for searching for MyTables.
      */
-    cursor?: ProductWhereUniqueInput
+    cursor?: MyTableWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Products from the position of the cursor.
+     * Take `±n` MyTables from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Products.
+     * Skip the first `n` MyTables.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Products.
+     * Filter by unique combinations of MyTables.
      */
-    distinct?: ProductScalarFieldEnum | ProductScalarFieldEnum[]
+    distinct?: MyTableScalarFieldEnum | MyTableScalarFieldEnum[]
   }
 
 
   /**
-   * Product findMany
+   * MyTable findMany
    */
-  export type ProductFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * Filter, which Products to fetch.
+     * Filter, which MyTables to fetch.
      */
-    where?: ProductWhereInput
+    where?: MyTableWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Products to fetch.
+     * Determine the order of MyTables to fetch.
      */
-    orderBy?: ProductOrderByWithRelationInput | ProductOrderByWithRelationInput[]
+    orderBy?: MyTableOrderByWithRelationInput | MyTableOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Products.
+     * Sets the position for listing MyTables.
      */
-    cursor?: ProductWhereUniqueInput
+    cursor?: MyTableWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Products from the position of the cursor.
+     * Take `±n` MyTables from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Products.
+     * Skip the first `n` MyTables.
      */
     skip?: number
-    distinct?: ProductScalarFieldEnum | ProductScalarFieldEnum[]
+    distinct?: MyTableScalarFieldEnum | MyTableScalarFieldEnum[]
   }
 
 
   /**
-   * Product create
+   * MyTable create
    */
-  export type ProductCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * The data needed to create a Product.
+     * The data needed to create a MyTable.
      */
-    data: XOR<ProductCreateInput, ProductUncheckedCreateInput>
+    data: XOR<MyTableCreateInput, MyTableUncheckedCreateInput>
   }
 
 
   /**
-   * Product createMany
+   * MyTable createMany
    */
-  export type ProductCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Products.
+     * The data used to create many MyTables.
      */
-    data: ProductCreateManyInput | ProductCreateManyInput[]
+    data: MyTableCreateManyInput | MyTableCreateManyInput[]
     skipDuplicates?: boolean
   }
 
 
   /**
-   * Product update
+   * MyTable update
    */
-  export type ProductUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * The data needed to update a Product.
+     * The data needed to update a MyTable.
      */
-    data: XOR<ProductUpdateInput, ProductUncheckedUpdateInput>
+    data: XOR<MyTableUpdateInput, MyTableUncheckedUpdateInput>
     /**
-     * Choose, which Product to update.
+     * Choose, which MyTable to update.
      */
-    where: ProductWhereUniqueInput
+    where: MyTableWhereUniqueInput
   }
 
 
   /**
-   * Product updateMany
+   * MyTable updateMany
    */
-  export type ProductUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Products.
+     * The data used to update MyTables.
      */
-    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyInput>
+    data: XOR<MyTableUpdateManyMutationInput, MyTableUncheckedUpdateManyInput>
     /**
-     * Filter which Products to update
+     * Filter which MyTables to update
      */
-    where?: ProductWhereInput
+    where?: MyTableWhereInput
   }
 
 
   /**
-   * Product upsert
+   * MyTable upsert
    */
-  export type ProductUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * The filter to search for the Product to update in case it exists.
+     * The filter to search for the MyTable to update in case it exists.
      */
-    where: ProductWhereUniqueInput
+    where: MyTableWhereUniqueInput
     /**
-     * In case the Product found by the `where` argument doesn't exist, create a new Product with this data.
+     * In case the MyTable found by the `where` argument doesn't exist, create a new MyTable with this data.
      */
-    create: XOR<ProductCreateInput, ProductUncheckedCreateInput>
+    create: XOR<MyTableCreateInput, MyTableUncheckedCreateInput>
     /**
-     * In case the Product was found with the provided `where` argument, update it with this data.
+     * In case the MyTable was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ProductUpdateInput, ProductUncheckedUpdateInput>
+    update: XOR<MyTableUpdateInput, MyTableUncheckedUpdateInput>
   }
 
 
   /**
-   * Product delete
+   * MyTable delete
    */
-  export type ProductDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
     /**
-     * Filter which Product to delete.
+     * Filter which MyTable to delete.
      */
-    where: ProductWhereUniqueInput
+    where: MyTableWhereUniqueInput
   }
 
 
   /**
-   * Product deleteMany
+   * MyTable deleteMany
    */
-  export type ProductDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Products to delete
+     * Filter which MyTables to delete
      */
-    where?: ProductWhereInput
+    where?: MyTableWhereInput
   }
 
 
   /**
-   * Product without action
+   * MyTable without action
    */
-  export type ProductDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type MyTableDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Product
+     * Select specific fields to fetch from the MyTable
      */
-    select?: ProductSelect<ExtArgs> | null
+    select?: MyTableSelect<ExtArgs> | null
   }
 
 
@@ -1789,16 +1800,17 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const ProductScalarFieldEnum: {
+  export const MyTableScalarFieldEnum: {
     id: 'id',
     name: 'name',
     model: 'model',
     price: 'price',
     color: 'color',
-    text: 'text'
+    text: 'text',
+    image: 'image'
   };
 
-  export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeof ProductScalarFieldEnum]
+  export type MyTableScalarFieldEnum = (typeof MyTableScalarFieldEnum)[keyof typeof MyTableScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1815,6 +1827,14 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -1851,6 +1871,20 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Bytes'
+   */
+  export type BytesFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Bytes'>
+    
+
+
+  /**
+   * Reference to a field of type 'Bytes[]'
+   */
+  export type ListBytesFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Bytes[]'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -1867,123 +1901,135 @@ export namespace Prisma {
    */
 
 
-  export type ProductWhereInput = {
-    AND?: ProductWhereInput | ProductWhereInput[]
-    OR?: ProductWhereInput[]
-    NOT?: ProductWhereInput | ProductWhereInput[]
-    id?: IntFilter<"Product"> | number
-    name?: StringFilter<"Product"> | string
-    model?: StringFilter<"Product"> | string
-    price?: IntFilter<"Product"> | number
-    color?: StringFilter<"Product"> | string
-    text?: StringFilter<"Product"> | string
+  export type MyTableWhereInput = {
+    AND?: MyTableWhereInput | MyTableWhereInput[]
+    OR?: MyTableWhereInput[]
+    NOT?: MyTableWhereInput | MyTableWhereInput[]
+    id?: IntFilter<"MyTable"> | number
+    name?: StringFilter<"MyTable"> | string
+    model?: StringFilter<"MyTable"> | string
+    price?: IntFilter<"MyTable"> | number
+    color?: StringFilter<"MyTable"> | string
+    text?: StringFilter<"MyTable"> | string
+    image?: BytesNullableFilter<"MyTable"> | Buffer | null
   }
 
-  export type ProductOrderByWithRelationInput = {
+  export type MyTableOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
     model?: SortOrder
     price?: SortOrder
     color?: SortOrder
     text?: SortOrder
+    image?: SortOrderInput | SortOrder
   }
 
-  export type ProductWhereUniqueInput = Prisma.AtLeast<{
+  export type MyTableWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: ProductWhereInput | ProductWhereInput[]
-    OR?: ProductWhereInput[]
-    NOT?: ProductWhereInput | ProductWhereInput[]
-    name?: StringFilter<"Product"> | string
-    model?: StringFilter<"Product"> | string
-    price?: IntFilter<"Product"> | number
-    color?: StringFilter<"Product"> | string
-    text?: StringFilter<"Product"> | string
+    AND?: MyTableWhereInput | MyTableWhereInput[]
+    OR?: MyTableWhereInput[]
+    NOT?: MyTableWhereInput | MyTableWhereInput[]
+    name?: StringFilter<"MyTable"> | string
+    model?: StringFilter<"MyTable"> | string
+    price?: IntFilter<"MyTable"> | number
+    color?: StringFilter<"MyTable"> | string
+    text?: StringFilter<"MyTable"> | string
+    image?: BytesNullableFilter<"MyTable"> | Buffer | null
   }, "id">
 
-  export type ProductOrderByWithAggregationInput = {
+  export type MyTableOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
     model?: SortOrder
     price?: SortOrder
     color?: SortOrder
     text?: SortOrder
-    _count?: ProductCountOrderByAggregateInput
-    _avg?: ProductAvgOrderByAggregateInput
-    _max?: ProductMaxOrderByAggregateInput
-    _min?: ProductMinOrderByAggregateInput
-    _sum?: ProductSumOrderByAggregateInput
+    image?: SortOrderInput | SortOrder
+    _count?: MyTableCountOrderByAggregateInput
+    _avg?: MyTableAvgOrderByAggregateInput
+    _max?: MyTableMaxOrderByAggregateInput
+    _min?: MyTableMinOrderByAggregateInput
+    _sum?: MyTableSumOrderByAggregateInput
   }
 
-  export type ProductScalarWhereWithAggregatesInput = {
-    AND?: ProductScalarWhereWithAggregatesInput | ProductScalarWhereWithAggregatesInput[]
-    OR?: ProductScalarWhereWithAggregatesInput[]
-    NOT?: ProductScalarWhereWithAggregatesInput | ProductScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Product"> | number
-    name?: StringWithAggregatesFilter<"Product"> | string
-    model?: StringWithAggregatesFilter<"Product"> | string
-    price?: IntWithAggregatesFilter<"Product"> | number
-    color?: StringWithAggregatesFilter<"Product"> | string
-    text?: StringWithAggregatesFilter<"Product"> | string
+  export type MyTableScalarWhereWithAggregatesInput = {
+    AND?: MyTableScalarWhereWithAggregatesInput | MyTableScalarWhereWithAggregatesInput[]
+    OR?: MyTableScalarWhereWithAggregatesInput[]
+    NOT?: MyTableScalarWhereWithAggregatesInput | MyTableScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"MyTable"> | number
+    name?: StringWithAggregatesFilter<"MyTable"> | string
+    model?: StringWithAggregatesFilter<"MyTable"> | string
+    price?: IntWithAggregatesFilter<"MyTable"> | number
+    color?: StringWithAggregatesFilter<"MyTable"> | string
+    text?: StringWithAggregatesFilter<"MyTable"> | string
+    image?: BytesNullableWithAggregatesFilter<"MyTable"> | Buffer | null
   }
 
-  export type ProductCreateInput = {
+  export type MyTableCreateInput = {
     name: string
     model: string
     price: number
     color: string
     text: string
+    image?: Buffer | null
   }
 
-  export type ProductUncheckedCreateInput = {
+  export type MyTableUncheckedCreateInput = {
     id?: number
     name: string
     model: string
     price: number
     color: string
     text: string
+    image?: Buffer | null
   }
 
-  export type ProductUpdateInput = {
+  export type MyTableUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
     text?: StringFieldUpdateOperationsInput | string
+    image?: NullableBytesFieldUpdateOperationsInput | Buffer | null
   }
 
-  export type ProductUncheckedUpdateInput = {
+  export type MyTableUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
     text?: StringFieldUpdateOperationsInput | string
+    image?: NullableBytesFieldUpdateOperationsInput | Buffer | null
   }
 
-  export type ProductCreateManyInput = {
+  export type MyTableCreateManyInput = {
     id?: number
     name: string
     model: string
     price: number
     color: string
     text: string
+    image?: Buffer | null
   }
 
-  export type ProductUpdateManyMutationInput = {
+  export type MyTableUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
     text?: StringFieldUpdateOperationsInput | string
+    image?: NullableBytesFieldUpdateOperationsInput | Buffer | null
   }
 
-  export type ProductUncheckedUpdateManyInput = {
+  export type MyTableUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     model?: StringFieldUpdateOperationsInput | string
     price?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
     text?: StringFieldUpdateOperationsInput | string
+    image?: NullableBytesFieldUpdateOperationsInput | Buffer | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2012,39 +2058,54 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type ProductCountOrderByAggregateInput = {
+  export type BytesNullableFilter<$PrismaModel = never> = {
+    equals?: Buffer | BytesFieldRefInput<$PrismaModel> | null
+    in?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    notIn?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    not?: NestedBytesNullableFilter<$PrismaModel> | Buffer | null
+  }
+
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
+  }
+
+  export type MyTableCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     model?: SortOrder
     price?: SortOrder
     color?: SortOrder
     text?: SortOrder
+    image?: SortOrder
   }
 
-  export type ProductAvgOrderByAggregateInput = {
+  export type MyTableAvgOrderByAggregateInput = {
     id?: SortOrder
     price?: SortOrder
   }
 
-  export type ProductMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-    model?: SortOrder
-    price?: SortOrder
-    color?: SortOrder
-    text?: SortOrder
-  }
-
-  export type ProductMinOrderByAggregateInput = {
+  export type MyTableMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     model?: SortOrder
     price?: SortOrder
     color?: SortOrder
     text?: SortOrder
+    image?: SortOrder
   }
 
-  export type ProductSumOrderByAggregateInput = {
+  export type MyTableMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    model?: SortOrder
+    price?: SortOrder
+    color?: SortOrder
+    text?: SortOrder
+    image?: SortOrder
+  }
+
+  export type MyTableSumOrderByAggregateInput = {
     id?: SortOrder
     price?: SortOrder
   }
@@ -2083,6 +2144,16 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type BytesNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Buffer | BytesFieldRefInput<$PrismaModel> | null
+    in?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    notIn?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    not?: NestedBytesNullableWithAggregatesFilter<$PrismaModel> | Buffer | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedBytesNullableFilter<$PrismaModel>
+    _max?: NestedBytesNullableFilter<$PrismaModel>
+  }
+
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
@@ -2093,6 +2164,10 @@ export namespace Prisma {
     decrement?: number
     multiply?: number
     divide?: number
+  }
+
+  export type NullableBytesFieldUpdateOperationsInput = {
+    set?: Buffer | null
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -2118,6 +2193,13 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type NestedBytesNullableFilter<$PrismaModel = never> = {
+    equals?: Buffer | BytesFieldRefInput<$PrismaModel> | null
+    in?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    notIn?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    not?: NestedBytesNullableFilter<$PrismaModel> | Buffer | null
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
@@ -2164,15 +2246,36 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
+  export type NestedBytesNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Buffer | BytesFieldRefInput<$PrismaModel> | null
+    in?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    notIn?: Buffer[] | ListBytesFieldRefInput<$PrismaModel> | null
+    not?: NestedBytesNullableWithAggregatesFilter<$PrismaModel> | Buffer | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedBytesNullableFilter<$PrismaModel>
+    _max?: NestedBytesNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
 
 
   /**
    * Aliases for legacy arg types
    */
     /**
-     * @deprecated Use ProductDefaultArgs instead
+     * @deprecated Use MyTableDefaultArgs instead
      */
-    export type ProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = ProductDefaultArgs<ExtArgs>
+    export type MyTableArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = MyTableDefaultArgs<ExtArgs>
 
   /**
    * Batch Payload for updateMany & deleteMany & createMany

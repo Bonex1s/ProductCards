@@ -1,6 +1,6 @@
 const inputPanel = document.getElementById("input-panel");
 const createButtonMain = document.getElementById("create-button-main");
-const closeButton = document.getElementById("back-button");
+const closeButton = document.getElementById("close-button");
 const productList = document.getElementById("productList");
 
 createButtonMain.addEventListener("click", function () {

@@ -1,19 +1,22 @@
 // schema.prisma
+
 generator client {
   provider = "prisma-client-js"
   output   = "./generated/client"
 }
 
+// Определите вашу базу данных и параметры подключения.
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://postgres:58121@localhost:5432/mydatabase"
 }
 
-model Product {
-  id    Int      @id @default(autoincrement())
-  name  String
-  model String
-  price Int
-  color String
-  text  String
+model MyTable {
+  id     Int      @id @default(autoincrement())
+  name   String
+  model  String
+  price  Int
+  color  String
+  text   String
+  image Bytes?
 }
