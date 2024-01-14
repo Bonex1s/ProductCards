@@ -5,8 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateProductList(product) {
     const productCard = document.createElement("li");
     productCard.innerHTML = `
-      <div>
-        <h1>${product.name}</h1>
+      <div class="card">
+      <img
+      src="/img/b604d7ee6d0582ee6a6e7faf1e0cf528.jpg"
+      alt="Product"
+      class="img-product"
+    />
+        <h1 class="product-name">${product.name}</h1>
         <p>${product.model}</p>
         <p>${product.price}</p>
         <p>${product.color}</p>

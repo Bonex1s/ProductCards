@@ -3,9 +3,11 @@ import express from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import pg from "pg";
-const { Pool } = pg;
 import cors from "cors";
+// import { PrismaClient } from '@prisma/client';
 
+// const prisma = new PrismaClient();
+const { Pool } = pg;
 const app = express();
 const port = 3030;
 

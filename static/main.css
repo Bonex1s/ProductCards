@@ -33,6 +33,7 @@ a:hover {
 } */
 
 #productList {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -44,4 +45,21 @@ a:hover {
 
 #productList img {
   max-width: 100%; /* Чтобы изображение не выходило за пределы контейнера */
+}
+
+.card {
+  padding: 10px;
+  width: 150px;
+  height: 200px;
+}
+
+.product-name {
+  font-weight: 500;
+  color: rgb(114, 1, 107);
+  font-size: larger;
+}
+
+.img-product {
+  width: 150px;
+  height: 150px;
 }
