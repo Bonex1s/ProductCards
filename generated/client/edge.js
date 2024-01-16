@@ -127,7 +127,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/bonex1/Documents/webpj/newServer/generated/client",
+      "value": "/Users/bonex1/Documents/webpj/ProductCards/generated/client",
       "fromEnvVar": null
     },
     "config": {
@@ -153,6 +153,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -161,8 +162,9 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Ly8gc2NoZW1hLnByaXNtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCn0KCi8vINCe0L/RgNC10LTQtdC70LjRgtC1INCy0LDRiNGDINCx0LDQt9GDINC00LDQvdC90YvRhSDQuCDQv9Cw0YDQsNC80LXRgtGA0Ysg0L/QvtC00LrQu9GO0YfQtdC90LjRjy4KZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICB1cmwgICAgICA9ICJwb3N0Z3Jlc3FsOi8vcG9zdGdyZXM6NTgxMjFAbG9jYWxob3N0OjU0MzIvbXlkYXRhYmFzZSIKfQoKbW9kZWwgTXlUYWJsZSB7CiAgaWQgICAgIEludCAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgbmFtZSAgIFN0cmluZwogIG1vZGVsICBTdHJpbmcKICBwcmljZSAgSW50CiAgY29sb3IgIFN0cmluZwogIHRleHQgICBTdHJpbmcKICBpbWFnZSBCeXRlcz8KfQo=",
-  "inlineSchemaHash": "93d7859f2017473bc9384b3ac5871fc9f9e8f4889429b9b95bad62ec72d13e80"
+  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCn0KCi8vINCe0L/RgNC10LTQtdC70LjRgtC1INCy0LDRiNGDINCx0LDQt9GDINC00LDQvdC90YvRhSDQuCDQv9Cw0YDQsNC80LXRgtGA0Ysg0L/QvtC00LrQu9GO0YfQtdC90LjRjy4KZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICB1cmwgICAgICA9ICJwb3N0Z3Jlc3FsOi8vcG9zdGdyZXM6NTgxMjFAbG9jYWxob3N0OjU0MzIvbXlkYXRhYmFzZSIKfQoKbW9kZWwgTXlUYWJsZSB7CiAgaWQgICAgIEludCAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgbmFtZSAgIFN0cmluZwogIG1vZGVsICBTdHJpbmcKICBwcmljZSAgSW50CiAgY29sb3IgIFN0cmluZwogIHRleHQgICBTdHJpbmcKICBpbWFnZSBCeXRlcz8KfQo=",
+  "inlineSchemaHash": "7448cdc77383d67e6751b4a5058cfd1383dd6a3342072947a8e096070da94981",
+  "noEngine": false
 }
 config.dirname = '/'
 
