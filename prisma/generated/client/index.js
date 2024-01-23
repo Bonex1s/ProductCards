@@ -31,12 +31,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 5.8.0
- * Query Engine version: 0a83d8541752d7582de2ebc1ece46519ce72a848
+ * Prisma Client JS version: 5.8.1
+ * Query Engine version: 78caf6feeaed953168c64e15a249c3e9a033ebe2
  */
 Prisma.prismaVersion = {
-  client: "5.8.0",
-  engine: "0a83d8541752d7582de2ebc1ece46519ce72a848"
+  client: "5.8.1",
+  engine: "78caf6feeaed953168c64e15a249c3e9a033ebe2"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -128,7 +128,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/bonex1/Documents/webpj/newServer/prisma/generated/client",
+      "value": "/Users/bonex1/Documents/webpj/newServerIMG/prisma/generated/client",
       "fromEnvVar": null
     },
     "config": {
@@ -145,16 +145,16 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null
+    "rootEnvPath": null,
+    "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
-  "clientVersion": "5.8.0",
-  "engineVersion": "0a83d8541752d7582de2ebc1ece46519ce72a848",
+  "clientVersion": "5.8.1",
+  "engineVersion": "78caf6feeaed953168c64e15a249c3e9a033ebe2",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -164,8 +164,7 @@ const config = {
     }
   },
   "inlineSchema": "Ly8gc2NoZW1hLnByaXNtYQoKZ2VuZXJhdG9yIGNsaWVudCB7CiAgcHJvdmlkZXIgPSAicHJpc21hLWNsaWVudC1qcyIKICBvdXRwdXQgICA9ICIuL2dlbmVyYXRlZC9jbGllbnQiCn0KCi8vINCe0L/RgNC10LTQtdC70LjRgtC1INCy0LDRiNGDINCx0LDQt9GDINC00LDQvdC90YvRhSDQuCDQv9Cw0YDQsNC80LXRgtGA0Ysg0L/QvtC00LrQu9GO0YfQtdC90LjRjy4KZGF0YXNvdXJjZSBkYiB7CiAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICB1cmwgICAgICA9ICJwb3N0Z3Jlc3FsOi8vcG9zdGdyZXM6NTgxMjFAbG9jYWxob3N0OjU0MzIvbXlkYXRhYmFzZSIKfQoKbW9kZWwgTXlUYWJsZSB7CiAgaWQgICAgIEludCAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgbmFtZSAgIFN0cmluZwogIG1vZGVsICBTdHJpbmcKICBwcmljZSAgSW50CiAgY29sb3IgIFN0cmluZwogIHRleHQgICBTdHJpbmcKICBpbWFnZSBCeXRlcz8KfQo=",
-  "inlineSchemaHash": "93d7859f2017473bc9384b3ac5871fc9f9e8f4889429b9b95bad62ec72d13e80",
-  "noEngine": false
+  "inlineSchemaHash": "93d7859f2017473bc9384b3ac5871fc9f9e8f4889429b9b95bad62ec72d13e80"
 }
 
 const fs = require('fs')

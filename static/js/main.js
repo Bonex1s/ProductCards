@@ -1,51 +1,64 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   const productList = document.getElementById("productList");
   const submitButton = document.getElementById("submitButton");
 
-  function updateProductList(product) {
+  async function updateProductList(product) {
     const productCard = document.createElement("li");
-    productCard.innerHTML = `
-      <div class="card">
-      <img
-      src="/img/b604d7ee6d0582ee6a6e7faf1e0cf528.jpg"
-      alt="Product"
-      class="img-product"
-    />
+
+    if (product.image) {
+      const blob = new Blob([new Uint8Array(product.image.data)], {
+        type: product.image.mimeType,
+      });
+      const imageUrl = URL.createObjectURL(blob);
+      productCard.innerHTML = `
+        <img src="${imageUrl}" alt="Product" class="img-product">
         <h1 class="product-name">${product.name}</h1>
         <p>${product.model}</p>
         <p>${product.price}</p>
         <p>${product.color}</p>
         <p>${product.text}</p>
-      </div>
-    `;
+      `;
+    } else {
+      productCard.innerHTML = `
+        <h1 class="product-name">${product.name}</h1>
+        <p>${product.model}</p>
+        <p>${product.price}</p>
+        <p>${product.color}</p>
+        <p>${product.text}</p>
+        <p>Изображение отсутствует</p>
+      `;
+    }
 
     productList.appendChild(productCard);
   }
 
-  function submitForm() {
-    const formData = {
-      name: document.getElementById("productName").value,
-      model: document.getElementById("model").value,
-      price: document.getElementById("price").value,
-      color: document.getElementById("color").value,
-      text: document.getElementById("text-block").value,
-    };
+  async function submitForm() {
+    const fileInput = document.getElementById("inputGroupFile02");
+    const formData = new FormData();
 
-    fetch("/api/addProduct", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        updateProductList(data.product);
-      })
-      .catch((error) => {
-        console.error("Ошибка при добавлении товара:", error);
+    formData.append("image", fileInput.files[0]);
+    formData.append("name", document.getElementById("productName").value);
+    formData.append("model", document.getElementById("model").value);
+    formData.append("price", document.getElementById("price").value);
+    formData.append("color", document.getElementById("color").value);
+    formData.append("text", document.getElementById("text-block").value);
+
+    try {
+      const response = await fetch("/api/addProduct", {
+        method: "POST",
+        body: formData,
       });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log(data);
+      updateProductList(data.product);
+    } catch (error) {
+      console.error("Ошибка при добавлении товара:", error);
+    }
   }
 
   if (submitButton) {
@@ -53,15 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (productList) {
-    fetch("/api/getProducts")
-      .then((response) => response.json())
-      .then((data) => {
-        data.forEach((product) => {
-          updateProductList(product);
-        });
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении товаров:", error);
+    try {
+      const response = await fetch("/api/getProducts");
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      data.forEach((product) => {
+        updateProductList(product);
       });
+    } catch (error) {
+      console.error("Ошибка при получении товаров:", error);
+    }
   }
 });
